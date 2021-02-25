@@ -1,0 +1,5 @@
+2021-02-24 13:43:43,138 [INFO ]  Starting Rasa server on http://localhost:5005
+2021-02-24 13:43:50,511 [INFO ]  Rasa server is up and running.
+2021-02-24 13:45:58,117 [ERROR]  User is not authenticated.
+2021-02-24 13:53:57,898 [ERROR]  User is not authenticated.
+2021-02-24 13:54:31,984 [ERROR]  User is not authenticated.
