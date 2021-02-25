@@ -1,14 +1,12 @@
 {
   "config": "99914b932bd37a50b983c5e7c90ae93b",
-  "core-config": "0e7f782798a945adbed3ad4501b35049",
-  "nlu-config": "cf717691cdc4c7aaf42a6aa812cc3846",
-  "config-without-epochs": "b0c23cc92969531b62264bcbdbcdb46a",
-  "domain": "9da9a198a1e27ac393c37d14583b6ac5",
-  "nlg": "412858793cc1d6b469165f51038a82a5",
-  "project": "08cfd9d0b47ae0d698e7b9b5d93264b26280405aea9de0aa973739c54754f997",
-  "messages": "ebe0771eba56bd9e9b5a10ec355f168b",
-  "nlu_labels": "101e343f46d0cf1246f0d234d31c839c",
-  "stories": "53efbfe1a857cf5a06ccd8283e761198",
-  "trained_at": 1614085947.2087111,
-  "version": "2.3.1"
+  "core-config": "56f4adf827a73481c28601d7d6c62562",
+  "nlu-config": "9cd58a3ec816e17b8f149091ba14dbf6",
+  "domain": 283583868163721262,
+  "nlg": "ea3547fc103c9b05992f407b431f4f0f",
+  "project": null,
+  "messages": 463499907476558720,
+  "stories": 750931222862006648,
+  "trained_at": 1614170270.9008563,
+  "version": "2.0.6"
 }

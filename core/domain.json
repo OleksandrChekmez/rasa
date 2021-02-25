@@ -1,7 +1,13 @@
 {
   "states": [
+    "affirm",
     "back",
+    "bot_challenge",
+    "deny",
+    "goodbye",
     "greet",
+    "mood_great",
+    "mood_unhappy",
     "nlu_fallback",
     "out_of_scope",
     "restart",
@@ -17,6 +23,11 @@
     "action_two_stage_fallback",
     "action_back",
     "...",
-    "utter_greet"
+    "utter_cheer_up",
+    "utter_did_that_help",
+    "utter_goodbye",
+    "utter_greet",
+    "utter_happy",
+    "utter_iamabot"
   ]
 }

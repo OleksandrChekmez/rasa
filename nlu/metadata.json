@@ -6,19 +6,15 @@
             "intent_split_symbol": "_",
             "token_pattern": null,
             "name": "WhitespaceTokenizer",
-            "index": 0,
             "class": "rasa.nlu.tokenizers.whitespace_tokenizer.WhitespaceTokenizer"
         },
         {
             "case_sensitive": true,
             "use_lookup_tables": true,
             "use_regexes": true,
-            "number_additional_patterns": null,
-            "use_word_boundaries": true,
             "name": "RegexFeaturizer",
-            "index": 1,
-            "alias": "component_1_RegexFeaturizer",
-            "file": "component_1_RegexFeaturizer",
+            "alias": "RegexFeaturizer",
+            "file": "component_1_RegexFeaturizer.pkl",
             "class": "rasa.nlu.featurizers.sparse_featurizer.regex_featurizer.RegexFeaturizer"
         },
         {
@@ -43,8 +39,7 @@
                 ]
             ],
             "name": "LexicalSyntacticFeaturizer",
-            "index": 2,
-            "alias": "component_2_LexicalSyntacticFeaturizer",
+            "alias": "LexicalSyntacticFeaturizer",
             "file": "component_2_LexicalSyntacticFeaturizer",
             "class": "rasa.nlu.featurizers.sparse_featurizer.lexical_syntactic_featurizer.LexicalSyntacticFeaturizer"
         },
@@ -62,14 +57,8 @@
             "OOV_token": null,
             "OOV_words": [],
             "use_lemma": true,
-            "additional_vocabulary_size": {
-                "text": null,
-                "response": null,
-                "action_text": null
-            },
             "name": "CountVectorsFeaturizer",
-            "index": 3,
-            "alias": "component_3_CountVectorsFeaturizer",
+            "alias": "CountVectorsFeaturizer",
             "file": "component_3_CountVectorsFeaturizer.pkl",
             "class": "rasa.nlu.featurizers.sparse_featurizer.count_vectors_featurizer.CountVectorsFeaturizer"
         },
@@ -87,14 +76,8 @@
             "OOV_token": null,
             "OOV_words": [],
             "use_lemma": true,
-            "additional_vocabulary_size": {
-                "text": null,
-                "response": null,
-                "action_text": null
-            },
             "name": "CountVectorsFeaturizer",
-            "index": 4,
-            "alias": "component_4_CountVectorsFeaturizer",
+            "alias": "CountVectorsFeaturizer",
             "file": "component_4_CountVectorsFeaturizer.pkl",
             "class": "rasa.nlu.featurizers.sparse_featurizer.count_vectors_featurizer.CountVectorsFeaturizer"
         },
@@ -130,7 +113,7 @@
             },
             "number_of_negative_examples": 20,
             "similarity_type": "inner",
-            "loss_type": "cross_entropy",
+            "loss_type": "softmax",
             "ranking_length": 10,
             "maximum_positive_similarity": 0.8,
             "maximum_negative_similarity": -0.4,
@@ -146,24 +129,19 @@
             "evaluate_every_number_of_epochs": 20,
             "evaluate_on_number_of_examples": 0,
             "intent_classification": true,
-            "entity_recognition": true,
+            "entity_recognition": false,
             "use_masked_language_model": false,
             "BILOU_flag": true,
             "tensorboard_log_directory": null,
             "tensorboard_log_level": "epoch",
             "checkpoint_model": false,
             "featurizers": [],
-            "split_entities_by_comma": true,
-            "constrain_similarities": false,
-            "model_confidence": "softmax",
             "name": "DIETClassifier",
-            "index": 5,
-            "file": null,
+            "file": "component_5_DIETClassifier",
             "class": "rasa.nlu.classifiers.diet_classifier.DIETClassifier"
         },
         {
             "name": "EntitySynonymMapper",
-            "index": 6,
             "file": null,
             "class": "rasa.nlu.extractors.entity_synonyms.EntitySynonymMapper"
         },
@@ -205,7 +183,7 @@
             },
             "number_of_negative_examples": 20,
             "similarity_type": "inner",
-            "loss_type": "cross_entropy",
+            "loss_type": "softmax",
             "ranking_length": 10,
             "maximum_positive_similarity": 0.8,
             "maximum_negative_similarity": -0.4,
@@ -227,17 +205,20 @@
             "tensorboard_log_level": "epoch",
             "featurizers": [],
             "checkpoint_model": false,
-            "constrain_similarities": false,
-            "model_confidence": "softmax",
             "name": "ResponseSelector",
-            "index": 7,
             "intent_classification": true,
             "entity_recognition": false,
             "BILOU_flag": null,
             "file": null,
             "class": "rasa.nlu.selectors.response_selector.ResponseSelector"
+        },
+        {
+            "threshold": 0.3,
+            "ambiguity_threshold": 0.1,
+            "name": "FallbackClassifier",
+            "class": "rasa.nlu.classifiers.fallback_classifier.FallbackClassifier"
         }
     ],
-    "trained_at": "20210223-131228",
-    "rasa_version": "2.3.1"
+    "trained_at": "20210224-123822",
+    "rasa_version": "2.0.6"
 }
